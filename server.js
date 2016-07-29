@@ -1,15 +1,15 @@
 var express = require('express');
 var pagerouter = require('./app/router/page.router.js');
-
+var config = require('./app/config/config');
 
 var app = express();
 
 app.use(express.static(__dirname + '/public'));
 app.use('/', pagerouter);
 
-app.listen(3000, function(err){
+app.listen(config.port, function(err){
   if(err) {
     console.log("Error in connecting..");
   }
-  console.log("App connected to "+3000);
+  console.log("App connected to "+config.port);
 });
