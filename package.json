@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "scripts": {
-    "test": ""
-  },
   "repository": {
     "type": "git",
     "url": "git://github.com/rajzshkr/github-client.git"
