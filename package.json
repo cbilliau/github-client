@@ -13,7 +13,7 @@
     "url": "https://github.com/rajzshkr/github-client/issues"
   },
   "homepage": "https://github.com/rajzshkr/github-client#readme",
-  "devDependencies": {
+  "dependencies": {
     "express": "^4.14.0"
   }
 }
