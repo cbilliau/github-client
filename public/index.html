@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Github Profile Viewer</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+  </head>
+  <body>
+  <!-- HEADER SECTION -->
+
+  <header>
+
+  <!-- NAVIGATION BAR  -->
+    <nav class="navbar navbar-default">
+       <div class="container">
+         <div class="navbar-header">
+           <a class="navbar-brand" ui-sref='home'>Github Profile Viewer</a>
+         </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a ui-sref='home'>Home</a></li>
+            <li><a ui-sref='about'>About</a></li>
+          </ul>
+        </div>
+       </div>
+     </nav>
+
+   </header>
+
+   <!-- MAIN CONTAINER -->
+
+   <main ui-view class="container"></main>
+
+   <!-- FOOTER -->
+
+   <footer></footer>
+
+   <script data-main="js/main" src="js/vendor/require.js"></script>
+  </body>
+</html>

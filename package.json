@@ -1,0 +1,22 @@
+{
+  "name": "github-client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rajzshkr/github-client.git"
+  },
+  "author": "Raja Sekar <rajasekar89be@gmail.com> (http://rajasekarm.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rajzshkr/github-client/issues"
+  },
+  "homepage": "https://github.com/rajzshkr/github-client#readme",
+  "devDependencies": {
+    "express": "^4.14.0"
+  }
+}
