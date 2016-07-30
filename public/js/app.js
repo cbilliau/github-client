@@ -1,3 +1,7 @@
+/**
+ * Application Bootstrap done here
+ */
+
 (function(){
 
   define(['angular', 'uiRouter'], function(angular, uiRouter) {

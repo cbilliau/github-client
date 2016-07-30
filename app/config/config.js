@@ -1,6 +1,6 @@
 /**
  *
- * GLobal server side application configuration
+ * Global server side application configuration
  *
  */
 

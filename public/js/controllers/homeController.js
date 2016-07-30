@@ -13,7 +13,6 @@
     function HomeController(GithubService, APP_CONFIG){
       var home = this, defaultUsername = APP_CONFIG.defaultUser;
 
-
       home.getUserData = function(username){
         if(!username){
           home.error = true;

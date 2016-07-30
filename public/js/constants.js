@@ -1,11 +1,11 @@
 /**
- *
+ *	Global constant configuration using angular provider
  */
 
 (function(){
 
   'use strict';
-  
+
   var dependency = [
     "app",
     "../config/config"

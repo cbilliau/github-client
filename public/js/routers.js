@@ -1,3 +1,9 @@
+/**
+ *
+ * Application Router configuration using UI-ROUTER
+ *
+ */
+
 (function(){
 
   'use strict';

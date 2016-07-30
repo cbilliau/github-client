@@ -1,7 +1,7 @@
 {
   "name": "github-client",
   "version": "1.0.0",
-  "description": "",
+  "description": "Github client is a simple web application helps to get information of github user.",
   "main": "server.js",
   "repository": {
     "type": "git",

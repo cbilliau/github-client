@@ -1,4 +1,4 @@
-// Require config
+// Configuration for Require.js
 
 require.config({
     paths: {
@@ -16,6 +16,11 @@ require.config({
 });
 
 
+/**
+ *
+ * Application initialization done here
+ *
+ */
 
 (function(){
 
