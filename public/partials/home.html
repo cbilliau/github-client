@@ -1,69 +1,62 @@
 
 <div class="github-form">
-  <form>
+  <form ng-submit="home.getUserData(home.username)">
     <label>Search Github Users:</label>
-    <input type="text" class="form-control" />
+    <input type="text" ng-model="home.username" class="form-control" placeholder="Enter an username and press enter key" />
   </form>
 </div>
 
-<div class="panel panel-default">
+<div ng-if="home.error" class="panel-error">
+  {{ home.message }}
+</div>
+
+<div ng-if="!home.error"class="panel panel-default">
 	<div class="panel-heading">
 		<h3 class="panel-title">{{ home.user.name }}</h3>
 	</div>
 	<div class="panel-body">
 		<div class="row">
 			<div class="col-md-4">
-				<img src="//avatars3.githubusercontent.com/u/1450975?v=3&s=460" class="thumbnail" style="width: 100%" />
+				<img ng-show="home.user.avatar_url" src="{{ home.user.avatar_url }}" class="thumbnail" style="width: 100%" />
 			</div>
 			<div class="col-md-4">
 				<div class="row">
 					<div class="col-md-12">
-						<span class="label label-primary">1 Repos</span>
-						<span class="label label-success">2 Public Gists</span>
-						<span class="label label-info">100 Followers</span>
-						<span class="label label-danger">200 Following</span>
+						<span class="label label-primary">{{ home.user.public_repos }} Repos</span>
+						<span class="label label-success">{{ home.user.public_gists }} Public Gists</span>
+						<span class="label label-info">{{ home.user.followers }} Followers</span>
+						<span class="label label-danger">{{ home.user.following }} Following</span>
 					</div>
 				</div>
 				<hr />
 				<div class="row">
 					<div class="col-md-12">
 						<ul class="list-group">
-							<li class="list-group-item"><strong>Username: </strong> {this.props.userData.login}</li>
-							<li class="list-group-item"><strong>Location: </strong> {this.props.userData.location}</li>
-							<li class="list-group-item"><strong>Email: </strong> {this.props.userData.email}</li>
+							<li ng-show="home.user.name" class="list-group-item"><strong>Name: </strong> {{ home.user.name }}</li>
+              <li ng-show="home.user.bio" class="list-group-item"><strong>Bio: </strong> {{ home.user.bio }}</li>
+							<li ng-show="home.user.location" class="list-group-item"><strong>Location: </strong> {{ home.user.location }}</li>
+							<li ng-show="home.user.email" class="list-group-item"><strong>Email: </strong> {{ home.user.email }}</li>
+              <li ng-show="home.user.blog" class="list-group-item"><strong>Blog: </strong> {{ home.user.blog }}</li>
+              <li ng-show="home.user.company" class="list-group-item"><strong>Company: </strong> {{ home.user.company }}</li>
 						</ul>
 					</div>
 				</div>
 				<br />
-				<a class="btn btn-primary" target="_blank" href={this.props.userData.html_url}>Visit profile</a>
+				<a class="btn btn-primary" target="_blank" href="{{ home.user.html_url }}">Visit profile</a>
 			</div>
 		</div>
 
-		<br />
 
 		<h3>User Repositories</h3>
-
     <div>
-		<ul class="list-group">
-      <li class="list-group-item">
-        <a href="#">Test repo</a> - Description
-      </li>
-      <li class="list-group-item">
-        <a href="#">Test repo</a> - Description
-      </li>
-      <li class="list-group-item">
-        <a href="#">Test repo</a> - Description
-      </li>
-      <li class="list-group-item">
-        <a href="#">Test repo</a> - Description
-      </li>
-      <li class="list-group-item">
-        <a href="#">Test repo</a> - Description
-      </li>
-      <li class="list-group-item">
-        <a href="#">Test repo</a> - Description
-      </li>
-		</ul>
-	</div>
+  		<ul ng-if="!home.emptyrepo" class="list-group" ng-if="home.repo.length !== 0">
+        <li class="list-group-item" ng-repeat="repo in home.repo">
+          <a class="repo__link" target="_blank" href="{{ repo.html_url }}">{{ repo.name }}</a><span ng-if="repo.description"> - {{ repo.description }}</span>
+        </li>
+  		</ul>
+      <div class="repo__error" ng-if="home.emptyrepo">
+        No Repo Found
+      </div>
+	 </div>
 </div>
 </div>
