@@ -1,12 +1,12 @@
 
-<div class="github-form">
+<div class="github__form">
   <form ng-submit="home.getUserData(home.username)">
     <label>Search Github Users:</label>
     <input type="text" ng-model="home.username" class="form-control" placeholder="Enter an username and press enter key" />
   </form>
 </div>
 
-<div ng-if="home.error" class="panel-error">
+<div ng-if="home.error" class="panel__error">
   {{ home.message }}
 </div>
 
