@@ -17,7 +17,6 @@
       // Get repo list from GitHub
       obj.GetRepo = function(username, callback){
         var RepoEndPoint = APP_CONFIG.enpoint+username+'/repos'+"?per_page="+APP_CONFIG.repoCount+"&"+apikey;
-        console.log(RepoEndPoint);
         return $http.get(RepoEndPoint).then(function(data){
           // NOTE - Check funtion type
           callback(null, data);

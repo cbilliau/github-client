@@ -1,24 +1,21 @@
-.github-form{
+/*Custom css for Github client application*/
+
+.github__form{
   margin-bottom: 20px;
 }
 .repo__link{
   text-transform: capitalize;
 }
-
-.panel-error{
+.panel__error{
   text-align: center;
   font-size: 20px;
   margin-top: 39px;
-}
-.footer{
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  padding: 20px 0;
-  display: none;
 }
 .repo__error{
   padding: 20px 0;
   font-weight: bold;
   font-size: 14px;
+}
+.profile__img{
+  width: 100%;
 }
