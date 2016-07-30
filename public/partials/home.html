@@ -35,8 +35,8 @@
 							<li ng-show="home.user.name" class="list-group-item"><strong>Name: </strong> {{ home.user.name }}</li>
               <li ng-show="home.user.bio" class="list-group-item"><strong>Bio: </strong> {{ home.user.bio }}</li>
 							<li ng-show="home.user.location" class="list-group-item"><strong>Location: </strong> {{ home.user.location }}</li>
-							<li ng-show="home.user.email" class="list-group-item"><strong>Email: </strong> {{ home.user.email }}</li>
-              <li ng-show="home.user.blog" class="list-group-item"><strong>Blog: </strong> {{ home.user.blog }}</li>
+							<li ng-show="home.user.email" class="list-group-item"><strong>Email: </strong> <a href="mailto:{{ home.user.email }}?Subject=Hello {{ home.user.name }}" target="_top">{{ home.user.email }}</a></li>
+              <li ng-show="home.user.blog" class="list-group-item"><strong>Blog: </strong> <a target="_blank" href="{{home.user.blog}}">{{ home.user.blog }}</a></li>
               <li ng-show="home.user.company" class="list-group-item"><strong>Company: </strong> {{ home.user.company }}</li>
 						</ul>
 					</div>
