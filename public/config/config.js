@@ -1,3 +1,7 @@
+/**
+ * Application configuration for front end
+ */
+
 var AppConfig = {
   enpoint : "//api.github.com/users/",
   defaultUser: "rajzshkr",
