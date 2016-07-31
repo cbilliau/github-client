@@ -12,7 +12,9 @@
 
 <div ng-if="!home.error"class="panel panel-default">
 	<div class="panel-heading">
-		<h3 class="panel-title">{{ home.user.name }}</h3>
+    
+    <!-- Show Name if available || Fallback to user id itself -->
+		<h3 class="panel-title">{{ home.user.name || home.user.login }}</h3>
 	</div>
 	<div class="panel-body">
 		<div class="row">
