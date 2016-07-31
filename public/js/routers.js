@@ -12,7 +12,7 @@
     'app',
     'controllers/homeController',
     'controllers/aboutController'
-  ]
+  ];
 
   define(dependency, function(app) {
 

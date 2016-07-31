@@ -5,6 +5,7 @@
 (function(){
   'use strict';
 
+  // Dependency files for GithubService
   var dependency = [
     "app"
   ];
@@ -15,10 +16,11 @@
       var obj = {},
         apikey = "client_id="+APP_CONFIG.client_id+"&client_secret="+APP_CONFIG.client_secret;
       // Get repo list from GitHub
+
       obj.GetRepo = function(username, callback){
         var RepoEndPoint = APP_CONFIG.enpoint+username+'/repos'+"?per_page="+APP_CONFIG.repoCount+"&"+apikey;
         return $http.get(RepoEndPoint).then(function(data){
-          // NOTE - Check funtion type
+          // callback method inspired from Node.js with error as first argument and success as sesond argument
           callback(null, data);
         }, function(err){
           callback(err);
