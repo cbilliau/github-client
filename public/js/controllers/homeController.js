@@ -12,7 +12,7 @@
   var dependency = [
     "app",
     "constants",
-    "../services/github.service"
+    "../services/githubService"
   ];
 
   define(dependency, function(app){
